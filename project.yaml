@@ -1,0 +1,38 @@
+basic:
+    name: 'Teste JS 2'
+    environments:
+        production: 'https://iplestesl.dev11.javali.pt/'
+        staging: 'https://iplestesl.dev9.javali.pt/'
+        development: ''
+    breakpoints:
+        - 376
+        - 640
+        - 1024
+        - 1366
+    pages:
+        - /
+    monitoring:
+        days: {  }
+        type: ''
+        schedule_time: '12:30 AM'
+        schedule_time_zone: Europe/London
+        compare_with: last-production
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    isolate: ''
+    delay: 20
+    scroll: true
+    headers:
+        - { header: '', value: '' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content: ''
+    performance:
+        workers_production: 30
+        workers_nonproduction: 10
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
