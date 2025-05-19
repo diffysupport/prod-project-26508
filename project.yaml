@@ -11,6 +11,7 @@ basic:
         - 1366
     pages:
         - /
+        - '/#menu-estudar'
     monitoring:
         days: {  }
         type: ''
@@ -21,15 +22,27 @@ basic:
 advanced:
     mask: ''
     remove: ''
-    isolate: ''
+    isolate: .cookiesjsr-banner
     delay: 20
     scroll: true
     headers:
         - { header: '', value: '' }
     cookies: ''
-    custom_js: ''
+    custom_js: "if (window.location.hash === '#menu-estudar') {\n  setTimeout(function () {\n    const item = document.querySelector('li.menu-item.menu-item--expanded.gva-mega-menu');\n    const submenu = item?.querySelector('.sub-menu') || item?.querySelector('ul.menu.sub-menu');\n\n    if (item && submenu) {\n      item.classList.add('hover-simulado');\n      submenu.style.display = 'block';\n      submenu.style.opacity = '1';\n      submenu.style.visibility = 'visible';\n      submenu.style.zIndex = '9999';\n    }\n  }, 1000);\n}\n"
     custom_css: ''
-    mock_content: ''
+    mock_content:
+        - { selector: '', type: title }
+    login:
+        type: none
+        click_element: false
+        click_element_selector: ''
+        login_url: ''
+        username: ''
+        password: ''
+        username_selector: ''
+        password_selector: ''
+        submit_selector: ''
+        after_login_selector: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10
