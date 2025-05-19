@@ -7,7 +7,6 @@ basic:
     breakpoints:
         - 1366
     pages:
-        - /
         - '/#menu-estudar'
     monitoring:
         days: {  }
