@@ -25,7 +25,7 @@ advanced:
     headers:
         - { header: '', value: '' }
     cookies: ''
-    custom_js: "if (window.location.hash === '#menu-estudar') {\n  setTimeout(function () {\n    const item = document.querySelector('li.menu-item.menu-item--expanded.gva-mega-menu');\n    const submenu = item?.querySelector('.sub-menu') || item?.querySelector('ul.menu.sub-menu');\n\n    if (item && submenu) {\n      item.classList.add('hover-simulado');\n      submenu.style.display = 'block';\n      submenu.style.opacity = '1';\n      submenu.style.visibility = 'visible';\n      submenu.style.zIndex = '9999';\n    }\n  }, 1000);\n}\n"
+    custom_js: "if (window.location.hash === '#menu-estudar') {\n  setTimeout(function () {\n    const item = document.querySelector('li.menu-item--expanded.gva-mega-menu');\n    const submenu = item?.querySelector('ul.sub-menu');\n\n    if (item && submenu) {\n      submenu.style.display = 'block';\n      submenu.style.opacity = '1';\n      submenu.style.visibility = 'visible';\n      submenu.style.zIndex = '9999';\n      submenu.style.position = 'absolute';\n      submenu.style.top = '100%';\n      submenu.style.left = '0';\n      submenu.style.background = 'white'; // pode ser necessário\n    }\n  }, 1500);\n}\n"
     custom_css: ''
     mock_content:
         - { selector: '', type: title }
